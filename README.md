@@ -1,2 +1,2 @@
 # Classwork-C-programming
-This is the program to add two polynomials using arrays
+This is the repo for various C programmes done in my college lab.
