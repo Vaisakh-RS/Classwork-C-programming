@@ -1,0 +1,104 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int size,menu,n,i,j,temp;
+    char Ans='Y';
+    while(Ans=='Y'||Ans=='y')
+    {
+        printf("Enter the size of the array:");
+    scanf("%d",&n);
+    int arr[n],loc=-1,key;
+
+
+        printf("\n Select the method of Search:");
+    printf("1.Linear Search or 2.Binary Search\n");
+    printf("\nEnter The Type of Search:");
+    scanf("%d",&menu);
+      switch(menu)
+{
+      case 1:
+
+    printf("Enter the elements into the array:");
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&arr[i]);
+    }
+    printf("The entered array is:");
+    printf("\n");
+    for(i=0;i<n;i++)
+    {
+    printf("%d",arr[i]);
+    printf("\t");
+    }
+
+
+     printf("\n Enter the element to be searched by Linear Search:");
+    scanf("%d",&key);
+
+//Checking
+ for(i=0;i<n;i++)
+ {
+    if(arr[i]==key)
+     {
+         loc=i;
+         break;
+     }
+ }
+
+ if(loc>=0)
+ printf("The element is found at %d position in the array",loc+1);
+ else
+
+ printf("Sorry! The element is not found in the array");
+      break;
+
+     case 2:
+
+    printf("Enter the elements into the array in ascending order :");
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&arr[i]);
+    }
+    printf("The entered array is:");
+    printf("\n");
+    for(i=0;i<n;i++)
+    {
+    printf("%d",arr[i]);
+    printf("\t");
+    }
+
+
+ int ele,first,last,mid,flag=0;
+
+  printf("Input  the value to be search : ");
+  scanf("%d",&ele);
+  /* Binary Search  logic */
+  first=0;last=n-1;
+  while(first<=last)
+  {
+  mid=(first+last)/2;
+  if(ele==arr[mid])
+  {
+  flag=1;
+  break;
+  }
+  else if(ele<arr[mid])
+  last=mid-1;
+  else
+  first=mid+1;
+  }
+  if(flag==0)
+  printf("%d  value not found\n",ele);
+  else
+  printf("%d value  found at %d position\n",ele,mid+1);
+  break;
+   default:printf("Invalid Input!!! Please choose 1 or 2");
+
+    }
+ printf("\nDo you want to search another array(Y/N):");
+ scanf("%s",&Ans);
+
+}
+    }
+
