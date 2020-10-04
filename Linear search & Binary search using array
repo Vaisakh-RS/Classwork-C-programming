@@ -4,9 +4,9 @@ int main()
 {
     int size,menu,n,i,j,temp;
     char Ans='Y';
-    while(Ans=='Y'||Ans=='y')
+    while(Ans=='Y')
     {
-        printf("Enter the size of the array:");
+        printf("Please enter the size of the array :");
     scanf("%d",&n);
     int arr[n],loc=-1,key;
 
@@ -50,7 +50,7 @@ int main()
  printf("The element is found at %d position in the array",loc+1);
  else
 
- printf("Sorry! The element is not found in the array");
+ printf("I am very Sorry! The element is not found in the array");
       break;
 
      case 2:
@@ -71,7 +71,7 @@ int main()
 
  int ele,first,last,mid,flag=0;
 
-  printf("Input  the value to be search : ");
+  printf("Please Input  the value to be search : ");
   scanf("%d",&ele);
   /* Binary Search  logic */
   first=0;last=n-1;
